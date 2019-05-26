@@ -56,7 +56,7 @@ class Baseline():
 
         if type(rgb) == tuple or type(rgb) == list:
 
-            new_col = [rgb[0]/255,rgb[1]/255, rgb[2]/255]
+            new_col = [round(rgb[0]/255,3),round(rgb[1]/255,3), round(rgb[2]/255,3)]
 
             if len(rgb) == 4:
                 new_col.append(rgb[3])
@@ -406,19 +406,21 @@ class Baseline():
 
 if __name__ == '__main__':
 
-    tt = baseline()
+    tt = Baseline()
     # print(tt.get_rgb_0_1(tt.get_rgb('#689f38')))
 
     tt.set_primary_color((102,205,170))
 
-    print("hexa = ", tt.get_primary_color("hexa"))
-    print("rgb = ", tt.get_primary_color("rgb"))
-    print("rgb_0_1 = ", tt.get_primary_color("rgb_0_1"))
-    print("rgba = ", tt.get_primary_color("rgba"))
-    print("rgba_0_1 = ", tt.get_primary_color("rgba_0_1"))
-    print("hsl = ", tt.get_primary_color("hsl"))
-    print("hsv = ", tt.get_primary_color("hsv"))
-    print("yiq = ", tt.get_primary_color("yiq"))
+    print("hexa = ", tt.get_primary_color("hexa"),type(tt.get_primary_color("hexa")))
+    print("rgb = ", tt.get_primary_color("rgb"),type(tt.get_primary_color("rgb")))
+    print("rgb_0_1 = ", tt.get_primary_color("rgb_0_1"),type(tt.get_primary_color("rgb_0_1")))
+    print("rgba = ", tt.get_primary_color("rgba"),type(tt.get_primary_color("rgba")))
+    print("rgba_0_1 = ", tt.get_primary_color("rgba_0_1"),type(tt.get_primary_color("rgba_0_1")))
+    print("hsl = ", tt.get_primary_color("hsl"),type(tt.get_primary_color("hsl")))
+    print("hsv = ", tt.get_primary_color("hsv"),type(tt.get_primary_color("hsv")))
+    print("yiq = ", tt.get_primary_color("yiq"),type(tt.get_primary_color("yiq")))
+
+
 
 
 
