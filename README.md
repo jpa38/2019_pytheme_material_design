@@ -13,10 +13,11 @@
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [Détails Usage](#d%C3%A9tails-usage)
+    - [Command](#command)
+    - [Diagram class](#diagram-class)
     - [`color*` can be :](#color-can-be)
     - [`type_color*` can be:](#typecolor-can-be)
-  - [Command list](#command-list)
-    - [Command to set color](#command-to-set-color)
   - [Contributing](#contributing)
   - [Versionning](#versionning)
   - [Authors](#authors)
@@ -94,63 +95,135 @@ If you want to view an palette with your color:
 ```python
 todo
 ```
-## Diagram class
 
-![PyTheme's class](https://www.plantuml.com/plantuml/png/0/dPHDImCn48RlXVw7kQrMt7eHeL0eYdeLsdj9a-asc4rACgiiudyt-r7jxdQRhfT0vdtoJcOc101WuOXPob8r7laTJ2F7cK9ukB-3Jobe5qqhWIJvy5k-sc6AaGEkc7FZKIMM6tXa3fNK25zLD8vXISQo1E79A6FZk8pV0csKYNaHWXaewQZYv_FVSo-PvYIDzeaA7SZ0w_CAgZErpmqaIEkzbIcp-RgKhb8ZS79zGlvWLZ9DVPX3RhGuu_C719msZBydrcHQz5fbTiiuzibehR7_4eqETSCJmKez4wwXC3fVXYTwBXkOyx8zPs_eEeCkruDX4sWEg0PdbE_hkqwE3xNRSJ4-A4kdeQ4qZTu6uECs1z3E2mdp0njqwlLSa6H8lQsNrKj_7twd1MhXFxWV "PyTheme's class")
+## Détails Usage
+
+### Command
+You can set an color by two types:
+1. `hexadecimal` color, `string type`, the first character must be `#`
+2. `rgb decimal` color, `tuple` or `list` type
+
+### Diagram class
+
+![PyTheme's class](https://www.plantuml.com/plantuml/png/0/jLTHRzem47wlrFzmwXue6uHGhJ0XYgfLNTUdJeAtQK97ue6rO3FReKNJ_ljiiv4KI6nNdLy0t_VTz_dki1A0xRgM2eNAbzdfoTyTw3HaWXc1_cKCZpHLYqQd22ggTEZBPh8WIzAGa6GevUb90R0Ry14boIWZyAk8H17Sy8mB62ikS4wYg8YrGSqo7YKsFe2CIbK4hwwU9VcKiqHHphIwmO7YS7SxWIstdFGTp8cQhWHTejXCRVnyE1kfpOfiVxqTTcQZPXLXZO8YK_v4IHBEqY2jWXAiDiFanrpmdAK1ShduZWdn9n0XkFXlSCx2kwCvBwYpPhsaNaOij6IQurq6zsIFAoPR7fli2bUoRgXhE4Vgx8KEqJZMbJgH_MxKOFUwK8CyDeVryB3IL4oVGoBWg8SpTnJyktnHtzYBch9LhgPYFYlVr6QD3mRil1jVj2xYorQt7pURBlJN4lhR7lhUYC94_or0Ap_pz-_hWgQaP2wX8ib8ZNqCyz_gne5dC8pwSw37GT1naWLvyZZ9sPjUBqaHpwhzVDQ9N7wiM9KVdgkAoRWBcem7cyUZsIL1jwTfFErw-8gZzos8em-n_UZr-Wvt9gsFGollTecUfGDJEp131jt8LK7qCUZJL_GiOhX3tpAYJnqNCdERl7rQ4Rr1cCAinfpEvVHbz9oMrgzeQUrXQUsojA4_NysIpkMqPFGEBPcrU_Hlvwlsg7I73-p3pD0FZG5mUu_ju5M4b3yoJIbTCmFxtZ3o9c0mmyvti4muoyni864THZ3ztX4AoZLXgNvv_0C0 "PyTheme's class")
+
 
 <!---
-```plantuml
-    @startuml
-    /'scale 750 width'/
-    title PyTheme's class
+    ```plantuml
+        @startuml
+        /'scale 750 width'/
+        title PyTheme's class
 
-    class Baseline {
-    .. Storage Color..
-   - tblo.color : list
-    ==
-    .. Function's list to GET color ..
-   + get_primary_color(<b>type_color*</b>)
-   + get_primary_variant_color(<b>type_color*</b>)
-   + get_secondary_color(<b>type_color*</b>)
-   + get_secondary_variant_color(<b>type_color*</b>)
-   + get_background_color(<b>type_color*</b>)
-   + get_surface_color(<b>type_color*</b>)
-   + get_error_color(<b>type_color*</b>)
-   + get_error_color(<b>type_color*</b>)
-   + get_on_primary_color(<b>type_color*</b>)
-   + get_on_secondary_color(<b>type_color*</b>)
-   + get_on_background_color(<b>type_color*</b>)
-   + get_on_surface_color(<b>type_color*</b>)
-   + get_on_error_color(<b>type_color*</b>)
-    ==
-    .. Function's list to SET color ..
-    + set_primary_color(<b>color*</b>)
-    + set_primary_variant_color(<b>color*</b>)
-    + set_secondary_color(<b>color*</b>)
-    + set_secondary_variant_color(<b>color*</b>)
-    + set_background_color(<b>color*</b>)
-    + set_surface_color(<b>color*</b>)
-    + set_error_color(<b>color*</b>)
-    + set_on_primary_color(<b>color*</b>)
-    + set_on_secondary_color(<b>color*</b>)
-    + set_on_background_color(<b>color*</b>)
-    + set_on_surface_color(<b>color*</b>)
-    + set_on_error_color(<b>color*</b>)
-    }
+        class Baseline {
+        .. Color Storage..
+        - tblo.color : list
+        ==
+        .. Function's list to GET color ..
+        + get_primary_color(<b>type_color*</b>)
+        + get_primary_variant_color(<b>type_color*</b>)
+        + get_secondary_color(<b>type_color*</b>)
+        + get_secondary_variant_color(<b>type_color*</b>)
+        + get_background_color(<b>type_color*</b>)
+        + get_surface_color(<b>type_color*</b>)
+        + get_error_color(<b>type_color*</b>)
+        + get_error_color(<b>type_color*</b>)
+        + get_on_primary_color(<b>type_color*</b>)
+        + get_on_secondary_color(<b>type_color*</b>)
+        + get_on_background_color(<b>type_color*</b>)
+        + get_on_surface_color(<b>type_color*</b>)
+        + get_on_error_color(<b>type_color*</b>)
+        ==
+        .. Function's list to SET color ..
+        + set_primary_color(<b>color*</b>)
+        + set_primary_variant_color(<b>color*</b>)
+        + set_secondary_color(<b>color*</b>)
+        + set_secondary_variant_color(<b>color*</b>)
+        + set_background_color(<b>color*</b>)
+        + set_surface_color(<b>color*</b>)
+        + set_error_color(<b>color*</b>)
+        + set_on_primary_color(<b>color*</b>)
+        + set_on_secondary_color(<b>color*</b>)
+        + set_on_background_color(<b>color*</b>)
+        + set_on_surface_color(<b>color*</b>)
+        + set_on_error_color(<b>color*</b>)
+        }
 
-    Class input_rgb {
-        set_primary_color()
-    }
+        Class input_rgb {
+            Set_primary_color((102,205,170))
+            Set_primary_color([102,205,170])
+            Input Type rgb
+        }
+        hide input_rgb circle
 
-    hide input_rgb circle
+        Class input_rgba {
+            Set_primary_color((102,205,170,100))
+            Set_primary_color([102,205,170,100])
+            Input Type rgba
+        }
+        hide input_rgba circle
 
-    input_rgb --> Baseline : SET >
-    test2 --> Baseline
+        Class input_hexa {
+            Set_primary_color("#66cdaa")
+            Input Type Hexa
+        }
+        hide input_hexa circle
 
-    test3 <-- Baseline : SET <
+        Class output_rgb {
+            Get_primary_color((102,205,170))
+            Output Type rgb
+        }
+        hide output_rgb circle
 
-    @enduml
-```
+        Class output_rgb_0_1 {
+            Get_primary_color((0.4, 0.804, 0.667))
+            Output Type rgb_0_1
+        }
+        hide output_rgb_0_1 circle
+
+        Class output_rgba {
+            Get_primary_color((102, 205, 170, 1.0))
+            Output Type rgba
+        }
+        hide output_rgba circle
+
+        Class output_rgba_0_1 {
+            Get_primary_color((102, 205, 170, 1.0))
+            Output Type rgba_0_1
+        }
+        hide output_rgba_0_1 circle
+
+        Class output_hsl {
+            Get_primary_color(Experimental)
+            Output Type hsl
+        }
+        hide output_hsl circle
+
+        Class output_hsv {
+            Get_primary_color(Experimental)
+            Output Type hsv
+        }
+        hide output_hsv circle
+
+        Class output_yiq {
+            Get_primary_color(Experimental)
+            Output Type yiq
+        }
+        hide output_yiq circle
+
+            Baseline -up-> input_rgb : SET <
+            Baseline -up-> input_rgba : SET <
+            Baseline -up-> input_hexa : SET <
+
+            Baseline -down-> output_rgb : GET >
+            Baseline -down-> output_rgba : GET >
+            Baseline -down-> output_rgb_0_1 : GET >
+            Baseline -down-> output_rgba_0_1 : GET >
+            Baseline -down-> output_hsl : GET >
+            Baseline -down-> output_hsv : GET >
+            Baseline -down-> output_yiq : GET >
+
+        @enduml
+    ```
 -->
 
 ### `color*` can be :
@@ -176,23 +249,6 @@ todo
 | hls      	| Experimental             	| Tuple  	|
 | yiq      	| Experimental             	| Tuple  	|
 | hsv      	| Experimental             	| Tuple  	|
-
-
-## Command list
-
-### Command to set color
-
-You can set an color by two types:
-1. `hexadecimal` color, `string type`, the first character must be `#`
-2. `rgb decimal` color, `tuple` or `list` type
-
-Avaible commands :
-
-
-
-
-
-
 
 ## Contributing
 
