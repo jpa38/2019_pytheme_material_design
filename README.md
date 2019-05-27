@@ -13,7 +13,8 @@
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
-- [-tblo.color : list](#tblocolor--list)
+    - [`color*` can be :](#color-can-be)
+    - [`type_color*` can be:](#typecolor-can-be)
   - [Command list](#command-list)
     - [Command to set color](#command-to-set-color)
   - [Contributing](#contributing)
@@ -95,6 +96,8 @@ todo
 ```
 ## Diagram class
 
+![PyTheme's class](https://www.plantuml.com/plantuml/png/0/dPHDImCn48RlXVw7kQrMt7eHeL0eYdeLsdj9a-asc4rACgiiudyt-r7jxdQRhfT0vdtoJcOc101WuOXPob8r7laTJ2F7cK9ukB-3Jobe5qqhWIJvy5k-sc6AaGEkc7FZKIMM6tXa3fNK25zLD8vXISQo1E79A6FZk8pV0csKYNaHWXaewQZYv_FVSo-PvYIDzeaA7SZ0w_CAgZErpmqaIEkzbIcp-RgKhb8ZS79zGlvWLZ9DVPX3RhGuu_C719msZBydrcHQz5fbTiiuzibehR7_4eqETSCJmKez4wwXC3fVXYTwBXkOyx8zPs_eEeCkruDX4sWEg0PdbE_hkqwE3xNRSJ4-A4kdeQ4qZTu6uECs1z3E2mdp0njqwlLSa6H8lQsNrKj_7twd1MhXFxWV "PyTheme's class")
+
 <!---
 ```plantuml
     @startuml
@@ -102,55 +105,77 @@ todo
     title PyTheme's class
 
     class Baseline {
-   -tblo.color : list
-   ==
-   .. Function's list to GET color ..
-   + get_primary_color(mode*) : type_mode*
-   + get_primary_variant_color(mode*): type_mode*
-   + get_secondary_color(mode*) : type_mode*
-   + get_secondary_variant_color(mode*) : type_mode*
-   + get_background_color(mode*): type_mode*
-   + get_surface_color(mode*):type_mode*
-   + get_error_color(mode*):type_mode*
-   + get_error_color(mode*):type_mode*
-   + get_on_primary_color(mode*):type_mode*
-   + get_on_secondary_color(mode*):type_mode*
-   + get_on_background_color(mode*):type_mode*
-   + get_on_surface_color(mode*):type_mode*
-   + get_on_error_color(mode*):type_mode*
+    .. Storage Color..
+   - tblo.color : list
+    ==
+    .. Function's list to GET color ..
+   + get_primary_color(<b>type_color*</b>)
+   + get_primary_variant_color(<b>type_color*</b>)
+   + get_secondary_color(<b>type_color*</b>)
+   + get_secondary_variant_color(<b>type_color*</b>)
+   + get_background_color(<b>type_color*</b>)
+   + get_surface_color(<b>type_color*</b>)
+   + get_error_color(<b>type_color*</b>)
+   + get_error_color(<b>type_color*</b>)
+   + get_on_primary_color(<b>type_color*</b>)
+   + get_on_secondary_color(<b>type_color*</b>)
+   + get_on_background_color(<b>type_color*</b>)
+   + get_on_surface_color(<b>type_color*</b>)
+   + get_on_error_color(<b>type_color*</b>)
     ==
     .. Function's list to SET color ..
-    + set_primary_color(color*):type_color*
-    + set_primary_variant_color(color*):type_color*
-    + set_secondary_color(color*):type_color*
-    + set_secondary_variant_color(color*):type_color*
-    + set_background_color(color*):type_color*
-    + set_surface_color(color*):type_color*
-    + set_error_color(color*):type_color*
-    + set_on_primary_color(color*):type_color*
-    + set_on_secondary_color(color*):type_color*
-    + set_on_background_color(color*):type_color*
-    + set_on_surface_color(color*):type_color*
-    + set_on_error_color(color*):type_color*
+    + set_primary_color(<b>color*</b>)
+    + set_primary_variant_color(<b>color*</b>)
+    + set_secondary_color(<b>color*</b>)
+    + set_secondary_variant_color(<b>color*</b>)
+    + set_background_color(<b>color*</b>)
+    + set_surface_color(<b>color*</b>)
+    + set_error_color(<b>color*</b>)
+    + set_on_primary_color(<b>color*</b>)
+    + set_on_secondary_color(<b>color*</b>)
+    + set_on_background_color(<b>color*</b>)
+    + set_on_surface_color(<b>color*</b>)
+    + set_on_error_color(<b>color*</b>)
     }
+
+    Class input_rgb {
+        set_primary_color()
+    }
+
+    hide input_rgb circle
+
+    input_rgb --> Baseline : SET >
+    test2 --> Baseline
+
+    test3 <-- Baseline : SET <
 
     @enduml
 ```
 -->
 
-| MODE     	| Example                                      	| Type               	|
-|----------	|----------------------------------------------	|--------------------	|
-| hexa     	| #66cdaa                                      	| String             	|
-| rgb      	| (102, 205, 170)                              	| Tuple              	|
-| rgba     	| (0.4, 0.803921568627451, 0.6666666666666666) 	| 0.803921568627451, 	|
-| rgb_0_1  	|                                              	|                    	|
-| rgba_0_1 	|                                              	|                    	|
-| hsl      	|                                              	|                    	|
-| hsla     	|                                              	|                    	|
-| hls      	|                                              	|                    	|
-| yiq      	|                                              	|                    	|
-| hsv      	|                                              	|                    	|
+### `color*` can be :
 
+| COLOR 	| Example **INPUT**                           	| Type       	|
+|-------	|---------------------------------------------	|------------	|
+| hexa  	| #66cdaa                                     	| String     	|
+| rgb   	| (102, 205, 170) / [102, 205, 170]           	| Tuple/List 	|
+| rgba  	| (102, 205, 170, 1.0) / [102, 205, 170, 1.0] 	| Tuple/List 	|
+
+
+### `type_color*` can be:
+
+| MODE     	| Example OUTPUT             	| Type   	|
+|----------	|--------------------------	|--------	|
+| hexa     	| #66cdaa                  	| String 	|
+| rgb      	| (102, 205, 170)          	| Tuple  	|
+| rgba     	| (102, 205, 170, 1.0)     	| Tuple  	|
+| rgb_0_1  	| (0.4, 0.804, 0.667)      	| Tuple  	|
+| rgba_0_1 	| (0.4, 0.804, 0.667, 1.0) 	| Tuple  	|
+| hsl      	| Experimental             	| Tuple  	|
+| hsla     	| Experimental             	| Tuple  	|
+| hls      	| Experimental             	| Tuple  	|
+| yiq      	| Experimental             	| Tuple  	|
+| hsv      	| Experimental             	| Tuple  	|
 
 
 ## Command list
