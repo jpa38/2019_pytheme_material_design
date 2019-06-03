@@ -16,6 +16,7 @@
   - [Détails Usage](#d%C3%A9tails-usage)
     - [Command](#command)
     - [Diagram class](#diagram-class)
+    - [PyTheme's Input/Output](#pythemes-inputoutput)
     - [`color*` can be :](#color-can-be)
     - [`type_color*` can be:](#typecolor-can-be)
   - [Contributing](#contributing)
@@ -105,14 +106,14 @@ You can set an color by two types:
 
 ### Diagram class
 
-![PyTheme's class](https://www.plantuml.com/plantuml/png/0/jLTHRzem47wlrFzmwXue6uHGhJ0XYgfLNTUdJeAtQK97ue6rO3FReKNJ_ljiiv4KI6nNdLy0t_VTz_dki1A0xRgM2eNAbzdfoTyTw3HaWXc1_cKCZpHLYqQd22ggTEZBPh8WIzAGa6GevUb90R0Ry14boIWZyAk8H17Sy8mB62ikS4wYg8YrGSqo7YKsFe2CIbK4hwwU9VcKiqHHphIwmO7YS7SxWIstdFGTp8cQhWHTejXCRVnyE1kfpOfiVxqTTcQZPXLXZO8YK_v4IHBEqY2jWXAiDiFanrpmdAK1ShduZWdn9n0XkFXlSCx2kwCvBwYpPhsaNaOij6IQurq6zsIFAoPR7fli2bUoRgXhE4Vgx8KEqJZMbJgH_MxKOFUwK8CyDeVryB3IL4oVGoBWg8SpTnJyktnHtzYBch9LhgPYFYlVr6QD3mRil1jVj2xYorQt7pURBlJN4lhR7lhUYC94_or0Ap_pz-_hWgQaP2wX8ib8ZNqCyz_gne5dC8pwSw37GT1naWLvyZZ9sPjUBqaHpwhzVDQ9N7wiM9KVdgkAoRWBcem7cyUZsIL1jwTfFErw-8gZzos8em-n_UZr-Wvt9gsFGollTecUfGDJEp131jt8LK7qCUZJL_GiOhX3tpAYJnqNCdERl7rQ4Rr1cCAinfpEvVHbz9oMrgzeQUrXQUsojA4_NysIpkMqPFGEBPcrU_Hlvwlsg7I73-p3pD0FZG5mUu_ju5M4b3yoJIbTCmFxtZ3o9c0mmyvti4muoyni864THZ3ztX4AoZLXgNvv_0C0 "PyTheme's class")
+![README](https://www.plantuml.com/plantuml/png/0/jLLTQuCm57qlz3_SD_V1T2zZCDfIDhQz5jht4kEj3Oj9IQuRClRV5tLWswarXVeYvfoJe-SU8a1zpIqnGtacnwE_5OW2ovb4U7ouXo-Hq3Q86Z0WGGvR5AijPXXOu99P6un73QLQWMTcKGg5yDqWOGWlMce3IzA6fHY63NO754iTyWf_0YaiDU1qUh39Mwuu2QsSVSa3ql3-ke9Qkx_fBQH8wvqH6JF5kiAl9l6CYXtMJpUJA9vTTma-cH5CqN2XHQvLukNLIBpTOiO_KgDpbNZOvMR3E0uNe37QN8okbVzqdEQCd9tgdBnACz_8d6Pm3AURlUnejcrhTiTRsRvIzsXQSXx4zl5ecqgVoV4qUhX7K-XXjlMmd-uNJKVxJbXuVEh_phMIVmuEQbI41ZPQbxT5GVj7-ZvnZYfnluXV "README")
 
 
-<!---
+<script>
     ```plantuml
         @startuml
         /'scale 750 width'/
-        title PyTheme's class
+        'title PyTheme's class'
 
         class Baseline {
         .. Color Storage..
@@ -148,83 +149,44 @@ You can set an color by two types:
         + set_on_error_color(<b>color*</b>)
         }
 
-        Class input_rgb {
-            Set_primary_color((102,205,170))
-            Set_primary_color([102,205,170])
-            Input Type rgb
-        }
-        hide input_rgb circle
-
-        Class input_rgba {
-            Set_primary_color((102,205,170,100))
-            Set_primary_color([102,205,170,100])
-            Input Type rgba
-        }
-        hide input_rgba circle
-
-        Class input_hexa {
-            Set_primary_color("#66cdaa")
-            Input Type Hexa
-        }
-        hide input_hexa circle
-
-        Class output_rgb {
-            Get_primary_color((102,205,170))
-            Output Type rgb
-        }
-        hide output_rgb circle
-
-        Class output_rgb_0_1 {
-            Get_primary_color((0.4, 0.804, 0.667))
-            Output Type rgb_0_1
-        }
-        hide output_rgb_0_1 circle
-
-        Class output_rgba {
-            Get_primary_color((102, 205, 170, 1.0))
-            Output Type rgba
-        }
-        hide output_rgba circle
-
-        Class output_rgba_0_1 {
-            Get_primary_color((102, 205, 170, 1.0))
-            Output Type rgba_0_1
-        }
-        hide output_rgba_0_1 circle
-
-        Class output_hsl {
-            Get_primary_color(Experimental)
-            Output Type hsl
-        }
-        hide output_hsl circle
-
-        Class output_hsv {
-            Get_primary_color(Experimental)
-            Output Type hsv
-        }
-        hide output_hsv circle
-
-        Class output_yiq {
-            Get_primary_color(Experimental)
-            Output Type yiq
-        }
-        hide output_yiq circle
-
-            Baseline -up-> input_rgb : SET <
-            Baseline -up-> input_rgba : SET <
-            Baseline -up-> input_hexa : SET <
-
-            Baseline -down-> output_rgb : GET >
-            Baseline -down-> output_rgba : GET >
-            Baseline -down-> output_rgb_0_1 : GET >
-            Baseline -down-> output_rgba_0_1 : GET >
-            Baseline -down-> output_hsl : GET >
-            Baseline -down-> output_hsv : GET >
-            Baseline -down-> output_yiq : GET >
+        center footer Pytheme's class
 
         @enduml
     ```
--->
+</script>
+
+### PyTheme's Input/Output
+
+![README-1](https://www.plantuml.com/plantuml/png/0/Kr2008VYaiIYajBS75ukg8W2WbMGc9oTc9wgu9HOd9gJcPUgO6FZuHhX69CNN5AKcPTkPwTGZL2CghKMmTG8SdUAoRErZSaBAIt8ILN8BrBmoImkqLJGrRL366sbu9bNK5g2f0rY5KWVn3g26e3sE99W4K8dN0waC1hiN5rTg2cnG0t-fIKeDg6gXxWJf07YJi8w80ubmGgG1WM3HssJ34dLHeOkZs0V4jM7aQG-qZEGW7e4AparhoIrI24jFnz41LI6PAJcfgeNGw9G7w9F8QIo81KvEXrIyrA0AHe0 "README-1")
+
+
+<script>
+    ```plantuml
+        @startuml
+        
+        package Baseline <<HEXA\nString>> {
+            
+        }
+        (RGB\n==\nTuple or List) --> Baseline : Input
+        (HEXA\n==\nString) --> Baseline : Input
+        (RGBA\n==\nTuple or List) --> Baseline : Input
+
+        Baseline --> [RGB\n--\nTuple] : Output
+        Baseline --> [HEXA\n--\nString] : Output
+        Baseline --> [RGBA\n--\nTuple] : Output
+        Baseline --> [RGBA 0→1\n--\nTuple] : Output
+        Baseline --> [RGB 0→1\n--\nTuple] : Output
+        Baseline --> [HSL\n--\nTuple] : Output
+        Baseline --> [HSV\n--\nTuple] : Output
+        Baseline --> [YIQ\n--\nTuple] : Output
+        
+        center footer PyTheme's Input/Output Type
+
+        @enduml
+    ```
+
+</script>
+
 
 ### `color*` can be :
 
@@ -254,6 +216,7 @@ You can set an color by two types:
 
 Write your comments with the Google Style Python Docstrings
 
+If you use pycharm :
 - Document code with google style, check your pycharm's settings :
     Go to `File | Settings | Tools | Python Integrated Tools`
     - Find `Docstring format` and put  `Google`
