@@ -108,8 +108,8 @@ You can set an color by two types:
 
 ![README](https://www.plantuml.com/plantuml/png/0/jLLTQuCm57qlz3_SD_V1T2zZCDfIDhQz5jht4kEj3Oj9IQuRClRV5tLWswarXVeYvfoJe-SU8a1zpIqnGtacnwE_5OW2ovb4U7ouXo-Hq3Q86Z0WGGvR5AijPXXOu99P6un73QLQWMTcKGg5yDqWOGWlMce3IzA6fHY63NO754iTyWf_0YaiDU1qUh39Mwuu2QsSVSa3ql3-ke9Qkx_fBQH8wvqH6JF5kiAl9l6CYXtMJpUJA9vTTma-cH5CqN2XHQvLukNLIBpTOiO_KgDpbNZOvMR3E0uNe37QN8okbVzqdEQCd9tgdBnACz_8d6Pm3AURlUnejcrhTiTRsRvIzsXQSXx4zl5ecqgVoV4qUhX7K-XXjlMmd-uNJKVxJbXuVEh_phMIVmuEQbI41ZPQbxT5GVj7-ZvnZYfnluXV "README")
 
+<div style="display:none;">
 
-<script>
     ```plantuml
         @startuml
         /'scale 750 width'/
@@ -153,7 +153,8 @@ You can set an color by two types:
 
         @enduml
     ```
-</script>
+    
+</div>
 
 ### PyTheme's Input/Output
 
