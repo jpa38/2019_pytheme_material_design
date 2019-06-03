@@ -159,7 +159,7 @@ You can set an color by two types:
 
 ![README-1](https://www.plantuml.com/plantuml/png/0/Kr2008VYaiIYajBS75ukg8W2WbMGc9oTc9wgu9HOd9gJcPUgO6FZuHhX69CNN5AKcPTkPwTGZL2CghKMmTG8SdUAoRErZSaBAIt8ILN8BrBmoImkqLJGrRL366sbu9bNK5g2f0rY5KWVn3g26e3sE99W4K8dN0waC1hiN5rTg2cnG0t-fIKeDg6gXxWJf07YJi8w80ubmGgG1WM3HssJ34dLHeOkZs0V4jM7aQG-qZEGW7e4AparhoIrI24jFnz41LI6PAJcfgeNGw9G7w9F8QIo81KvEXrIyrA0AHe0 "README-1")
 
-<font color="white">
+
 <script>
     ```plantuml
         @startuml
@@ -186,7 +186,7 @@ You can set an color by two types:
     ```
 
 </script>
-</font>
+
 
 ### `color*` can be :
 
