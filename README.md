@@ -56,6 +56,7 @@ I am working with the windows's pycharm app.
   git clone https://github.com/jpa38/pytheme_material_design.git
   ```
 - ~~Use `Requirement.txt` to install dependencies~~
+
   ```
   pip install -r requirements.txt
   ```
@@ -245,6 +246,8 @@ We use [SemVer](http://semver.org/) for versioning :
         1. MAJOR version when you make incompatible API changes,
         2. MINOR version when you add functionality in a backwards-compatible manner, and
         3. PATCH version when you make backwards-compatible bug fixes.
+
+The version can be read in the **version.py** file.
 
 ## Authors
 - Jérôme PALANCA
