@@ -1,9 +1,9 @@
 # Ignorer le fichier .idea
-.idea
+.idea/
 
 # Ignorer tous les fichiers html
 *.html
 
 # Ignorer les dossiers :
-test
+test/
 venv
